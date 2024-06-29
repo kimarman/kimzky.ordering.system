@@ -115,18 +115,18 @@
             </section>
 
             <section id="cart" class="my-4">
-                <h2>Shopping Cart</h2>
-                <div id="cart-items" class="mb-3"></div>
-                <div id="totals">
-                    <p>Total Cost: ₱<span id="total-cost">0</span></p>
-                    <p>Change: ₱<span id="change">0</span></p>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="number" id="payment" class="form-control" placeholder="Enter payment amount">
-                    <div class="input-group-append">
-                        <button class="btn btn-success" onclick="calculateChange()">Calculate Change</button>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <label for="carts" class="form-label">Orders</label>
+                        <textarea class="form-control mb-2" rows="10" id="carts" readonly></textarea>
+                        <input type="text" class="form-control mb-2" id="total" readonly placeholder="Total">
+                        <input type="number" class="form-control mb-2" id="cash" placeholder="Cash Tendered">
+                        <input type="text" class="form-control mb-2" id="change" readonly placeholder="Change">
+                        <button class="btn btn-success w-100 checkoutBtn">Checkout</button>
                     </div>
                 </div>
+            </div>
             </section>
         </main>
     </div>
