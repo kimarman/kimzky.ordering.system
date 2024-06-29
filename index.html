@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi Eto ChatGPT promise🤞🏻</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="bg-primary text-white text-center py-4">
+            <h1>❤️My Milkshake Store❤️</h1>
+            <p>By: Kim Arman Dulay, Section: BSIT - 3B</p>
+        </header>
+        <main>
+            <section id="products" class="my-4">
+                <h2><center>Milkshake Menu</center></h2>
+                <div class="row" id="product-list">
+
+                </div>
+            </section>
+            <section id="cart" class="my-4">
+                <h2>Shopping Cart</h2>
+                <div id="cart-items" class="mb-3"></div>
+                <div id="totals">
+                    <p>Total Cost: <span id="total-cost">0</span></p>
+                    <p>Change: <span id="change">0</span></p>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="number" id="payment" class="form-control" placeholder="Enter payment amount">
+                    <div class="input-group-append">
+                        <button class="btn btn-success" onclick="calculateChange()">Calculate Change</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
