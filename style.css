@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  border-radius: 5px;
+}
+
+main {
+  padding: 1em;
+}
+
+section {
+  margin-bottom: 1em;
+}
+
+#products {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cart {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#totals p {
+  font-weight: bold;
+}
+
+.input-group-append button {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
