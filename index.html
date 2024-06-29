@@ -15,120 +15,111 @@
         </header>
         <main>
             <section id="products" class="my-4">
-                <h2><center>Milkshake Menu</center></h2>
-                <div class="row" id="product-list">
+                <h2 class="text-center">Milkshake Menu</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card">
+                            <img src="Blueberry cheesecake.webp" class="card-img-top" alt="Blueberry Cheesecake">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Blueberry Cheesecake</h5>
+                                <p class="card-text">Price: ₱<span id="price1">200.00</span></p>
+                                <input type="number" class="form-control mb-2" id="qty1" placeholder="Enter quantity">
+                                <button class="btn btn-primary addToCartBtn" data-product-id="1">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="Cool Mint.webp" class="card-img-top" alt="Cool Mint">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Cool Mint</h5>
+                                <p class="card-text">Price: ₱<span id="price2">300.00</span></p>
+                                <input type="number" class="form-control mb-2" id="qty2" placeholder="Enter quantity">
+                                <button class="btn btn-primary addToCartBtn" data-product-id="2">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="Neapolitan.webp" class="card-img-top" alt="Neapolitan">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Neapolitan</h5>
+                                <p class="card-text">Price: ₱<span id="price3">270.00</span></p>
+                                <input type="number" class="form-control mb-2" id="qty3" placeholder="Enter quantity">
+                                <button class="btn btn-primary addToCartBtn" data-product-id="3">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                    <div class="col">
+                        <div class="card">
+                            <img src="Raspberry and white chocolate.webp" class="card-img-top" alt="Raspberry and White Chocolate">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Raspberry and White Chocolate</h5>
+                                <p class="card-text">Price: ₱<span id="price4">190.00</span></p>
+                                <input type="number" class="form-control mb-2" id="qty4" placeholder="Enter quantity">
+                                <button class="btn btn-primary addToCartBtn" data-product-id="4">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="Strawberry marshmallow.webp" class="card-img-top" alt="Strawberry Marshmallow">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Strawberry Marshmallow</h5>
+                                <p class="card-text">Price: ₱<span id="price5">250.00</span></p>
+                                <input type="number" class="form-control mb-2" id="qty5" placeholder="Enter quantity">
+                                <button class="btn btn-primary addToCartBtn" data-product-id="5">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="Triple nut caramel.webp" class="card-img-top" alt="Triple Nut Caramel">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Triple Nut Caramel</h5>
+                                <p class="card-text">Price: ₱<span id="price6">300.00</span></p>
+                                <input type="number" class="form-control mb-2" id="qty6" placeholder="Enter quantity">
+                                <button class="btn btn-primary addToCartBtn" data-product-id="6">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                    <div class="col">
+                        <div class="card">
+                            <img src="Pina colada.webp" class="card-img-top" alt="Pina Colada">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Pina Colada</h5>
+                                <p class="card-text">Price: ₱<span id="price7">250.00</span></p>
+                                <input type="number" class="form-control mb-2" id="qty7" placeholder="Enter quantity">
+                                <button class="btn btn-primary addToCartBtn" data-product-id="7">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="Vanilla special.webp" class="card-img-top" alt="Vanilla Special">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Vanilla Special</h5>
+                                <p class="card-text">Price: ₱<span id="price8">200.00</span></p>
+                                <input type="number" class="form-control mb-2" id="qty8" placeholder="Enter quantity">
+                                <button class="btn btn-primary addToCartBtn" data-product-id="8">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <div class="container mt-4">
-        <div class="row">
-            <div class="col-12 text-center mb-3">
-                <h2>Welcome to KIMz MilkShake Store</h2>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-                <p>By: KimArman Dulay Section: BSIT-3B</p>
-                <hr class="hr" />
-            </div>
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card">
-                    <img src="Blueberry cheesecake.webp" class="card-img-top" alt="Blueberry Cheesecake">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Blueberry Cheesecake</h5>
-                        <p class="card-text">Price: ₱<span id="price1">200.00</span></p>
-                        <input type="number" class="form-control mb-2" id="qty1" placeholder="Enter quantity">
-                        <button class="btn btn-primary addToCartBtn" data-product-id="1">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="Cool Mint.webp" class="card-img-top" alt="Cool Mint">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Cool Mint</h5>
-                        <p class="card-text">Price: ₱<span id="price2">300.00</span></p>
-                        <input type="number" class="form-control mb-2" id="qty2" placeholder="Enter quantity">
-                        <button class="btn btn-primary addToCartBtn" data-product-id="2">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="Neapolitan.webp" class="card-img-top" alt="Neapolitan">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Neapolitan</h5>
-                        <p class="card-text">Price: ₱<span id="price3">270.00</span></p>
-                        <input type="number" class="form-control mb-2" id="qty3" placeholder="Enter quantity">
-                        <button class="btn btn-primary addToCartBtn" data-product-id="3">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-            <div class="col">
-                <div class="card">
-                    <img src="Raspberry and white chocolate.webp" class="card-img-top" alt="Raspberry and White Chocolate">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Raspberry and White Chocolate</h5>
-                        <p class="card-text">Price: ₱<span id="price4">190.00</span></p>
-                        <input type="number" class="form-control mb-2" id="qty4" placeholder="Enter quantity">
-                        <button class="btn btn-primary addToCartBtn" data-product-id="4">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="Strawberry marshmallow.webp" class="card-img-top" alt="Strawberry Marshmallow">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Strawberry Marshmallow</h5>
-                        <p class="card-text">Price: ₱<span id="price5">250.00</span></p>
-                        <input type="number" class="form-control mb-2" id="qty5" placeholder="Enter quantity">
-                        <button class="btn btn-primary addToCartBtn" data-product-id="5">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="Triple nut caramel.webp" class="card-img-top" alt="Triple Nut Caramel">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Triple Nut Caramel</h5>
-                        <p class="card-text">Price: ₱<span id="price6">300.00</span></p>
-                        <input type="number" class="form-control mb-2" id="qty6" placeholder="Enter quantity">
-                        <button class="btn btn-primary addToCartBtn" data-product-id="6">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-            <div class="col">
-                <div class="card">
-                    <img src="Pina colada.webp" class="card-img-top" alt="Pina Colada">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Pina Colada</h5>
-                        <p class="card-text">Price: ₱<span id="price7">250.00</span></p>
-                        <input type="number" class="form-control mb-2" id="qty7" placeholder="Enter quantity">
-                        <button class="btn btn-primary addToCartBtn" data-product-id="7">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="Vanilla special.webp" class="card-img-top" alt="Vanilla Special">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Vanilla Special</h5>
-                        <p class="card-text">Price: ₱<span id="price8">200.00</span></p>
-                        <input type="number" class="form-control mb-2" id="qty8" placeholder="Enter quantity">
-                        <button class="btn btn-primary addToCartBtn" data-product-id="8">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
             <section id="cart" class="my-4">
                 <h2>Shopping Cart</h2>
                 <div id="cart-items" class="mb-3"></div>
                 <div id="totals">
-                    <p>Total Cost: <span id="total-cost">0</span></p>
-                    <p>Change: <span id="change">0</span></p>
+                    <p>Total Cost: ₱<span id="total-cost">0</span></p>
+                    <p>Change: ₱<span id="change">0</span></p>
                 </div>
                 <div class="input-group mb-3">
                     <input type="number" id="payment" class="form-control" placeholder="Enter payment amount">
@@ -142,6 +133,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="index.js></script>
+    <script src="index.js"></script>
 </body>
 </html>
