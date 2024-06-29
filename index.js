@@ -1,55 +1,63 @@
-let products = [
-  { name: 'Vanilla special', price: 150, image: 'Vanilla special.webp' },
-  { name: 'Cool mint', price: 200, image: 'Cool mint.webp' },
-  { name: 'pina colada', price: 300, image: 'Pina colada.webp' },
-  { name: 'Raspberry and white chocolate', price: 210, image: 'Raspberry and white chocolate.webp' },
-  { name: 'Blueberry cheesecake', price: 150, image: 'Blueberry cheesecake.webp' },
-  { name: 'Strawberry marshmallow', price: 250, image: 'Strawberry marshmallow.webp' },
+document.addEventListener('DOMContentLoaded', () => {
+    const cartItems = {};
+    const prices = {
+        1: 200.00,
+        2: 300.00,
+        3: 270.00,
+        4: 190.00,
+        5: 250.00,
+        6: 300.00,
+        7: 250.00,
+        8: 200.00
+    };
 
-];
+    document.querySelectorAll('.addToCartBtn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const productId = event.target.getAttribute('data-product-id');
+            const qtyInput = document.getElementById(`qty${productId}`);
+            const quantity = parseInt(qtyInput.value, 10);
 
-function loadProducts() {
-  const productContainer = document.getElementById('product-list');
-  products.forEach((product, index) => {
-    let productDiv = document.createElement('div');
-    productDiv.classList.add('col-md-4', 'mb-3');
-    productDiv.innerHTML = `
-            <div class="card h-100">
-                <img src="${product.image}" class="card-img-top" alt="${product.name}">
-                <div class="card-body">
-                    <h5 class="card-title">${product.name}</h5>
-                    <p class="card-text">₱${product.price}</p>
-                    <button class="btn btn-primary" onclick="addToCart(${index})">Add to Cart</button>
-                </div>
-            </div>
-        `;
-    productContainer.appendChild(productDiv);
-  });
-}
+            if (quantity > 0) {
+                if (cartItems[productId]) {
+                    cartItems[productId] += quantity;
+                } else {
+                    cartItems[productId] = quantity;
+                }
+                updateCart();
+            }
+        });
+    });
 
-let cart = [];
+    function updateCart() {
+        const cartContainer = document.getElementById('cart-items');
+        cartContainer.innerHTML = '';
+        let totalCost = 0;
 
-function addToCart(index) {
-  cart.push(products[index]);
-  updateCart();
-}
+        for (const productId in cartItems) {
+            if (cartItems.hasOwnProperty(productId)) {
+                const quantity = cartItems[productId];
+                const cost = prices[productId] * quantity;
+                totalCost += cost;
 
-function updateCart() {
-  const cartItems = document.getElementById('cart-items');
-  cartItems.innerHTML = '';
-  let totalCost = 0;
-  cart.forEach(item => {
-    cartItems.innerHTML += <p>${item.name} - ₱${item.price}</p>;
-    totalCost += item.price;
-  });
-  document.getElementById('total-cost').innerText = totalCost;
-}
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'cart-item';
+                itemDiv.innerHTML = `
+                    <p>Product ID: ${productId}</p>
+                    <p>Quantity: ${quantity}</p>
+                    <p>Cost: ₱${cost.toFixed(2)}</p>
+                `;
+                cartContainer.appendChild(itemDiv);
+            }
+        }
 
-function calculateChange() {
-  const payment = document.getElementById('payment').value;
-  const totalCost = document.getElementById('total-cost').innerText;
-  const change = payment - totalCost;
-  document.getElementById('change').innerText = change >= 0 ? change : 'Insufficient payment';
-}
+        document.getElementById('total-cost').textContent = totalCost.toFixed(2);
+    }
 
-window.onload = loadProducts;
+    window.calculateChange = function() {
+        const totalCost = parseFloat(document.getElementById('total-cost').textContent);
+        const payment = parseFloat(document.getElementById('payment').value);
+        const change = payment - totalCost;
+
+        document.getElementById('change').textContent = change.toFixed(2);
+    };
+});
